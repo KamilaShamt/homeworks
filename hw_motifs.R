@@ -28,11 +28,11 @@ scoreMotifs <- function(motifs) {
 scoreMotifs(motifs2)
 
 
-consensus <- apply(profile_matrix, 2, function(col) {
+getConsensus <- apply(profile_matrix, 2, function(col) {
   nucleotides <- c("A", "C", "G", "T")
   nucleotides[which.max(col)]
 })
-consensus_string <- paste(consensus, collapse = "")
+consensus_string <- paste(getConsensus, collapse = "")
 consensus_string
 
 
